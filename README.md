@@ -4,23 +4,22 @@
 |:-:|
 [@이정민](https://github.com/jjeong1015) 
 
-# :shark:Docker
-Docker는 컨테이너 기술을 통해 애플리케이션과 해당 애플리케이션의 모든 의존성을 독립적인 환경에서 실행할 수 있도록 하는 오픈 소스 플랫폼이다.<br>
-Docker를 사용하면 **환경에 구애받지 않고 애플리케이션을 신속하게 배포 및 확장**할 수 있는 장점이 있다.
+# 🦈 왜 Docker를 써야 하는가?
+Docker는 컨테이너 기술을 통해 애플리케이션과 해당 애플리케이션의 모든 의존성을 독립적인 환경에서 실행할 수 있도록 하는 오픈 소스 플랫폼으로, **환경에 구애받지 않고 애플리케이션을 신속하게 배포 및 확장**할 수 있는 장점이 있다.
 
-## 🖼️ Docker Image
+## 🖼️ Docker Image란?
 Docker Image는 Docker 컨테이너를 실행하는 데 필요한 파일 시스템과 설정을 포함하는 읽기 전용 템플릿이다.<br>
 애플리케이션이 필요로 하는 **라이브러리, 종속성, 환경 변수, 설정 파일** 등을 포함하고 있으며, 컨테이너를 생성할 수 있다.
 
 ## 🚀 Docker Image 최적화
-Docker Image 최적화를 하면 배포 속도를 높이고 자원을 효율적으로 사용하며, 전반적인 애플리케이션의 성능과 안정성을 높일 수 있다.
+Docker Image 최적화를 하면 배포 속도를 높이고 자원을 효율적으로 사용하며, 애플리케이션의 성능과 안정성을 높일 수 있다.
 
-## 📄 Dockerfile
+## 📄 Dockerfile 최적화 과정
 
 ### 🎯 기획 의도
-1. 멀티 스테이지 빌드(빌드를 여러 번 하여 도커 이미지의 크기를 최소화하는 기법) 도입
-2. alpine(리눅스 기반)를 활용한 이미지 크기 최소화
-3. .dockerignore를 활용한 불필요한 파일 최소화
+1. 멀티 스테이지 빌드: 빌드를 나누어 이미지 크기를 최소화
+2. Alpine 사용: 가벼운 리눅스 배포판으로 이미지 크기 줄이기
+3. .dockerignore: 불필요한 파일을 제거해 이미지 최적화
 
 ### 🏗️ 설계
 **폴더 구조**<br>
@@ -91,10 +90,9 @@ $ docker ps -a
 
 ![image](https://github.com/user-attachments/assets/e1fd482b-ac10-40a3-9fe7-f5a1bd7d3c50)
 
+### 📊 이미지 크기 비교
 ![image](https://github.com/user-attachments/assets/9a2b21aa-6e23-441c-97f8-d0eeb41677b9)
 <br><br>**default, slim, alpine을 다 실행해보며 이미지 크기를 비교**해보았다.
-<br>testimg3 : default
-<br>testimg2 : slim
-<br>testimg : alpine
+<br>testimg : alpine, testimg2 : slim, testimg3 : default
 
-**이미지 크기 : alpine < slim < default**
+**이미지 크기 : alpine < slim < default**는 이러며, 이미지 크기가 작을수록 자원을 아끼고 속도가 빨라진다.
