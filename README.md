@@ -1,30 +1,27 @@
-# WooriFISA-Docker
+# Docker Image Optimization
 
 |<img src="https://avatars.githubusercontent.com/u/82391356?v=4" width="120" height="120"/>|
 |:-:|
 [@이정민](https://github.com/jjeong1015) 
 
 # :shark:Docker
-도커는 컨테이너화 기술을 통해 애플리케이션과 해당 애플리케이션의 모든 의존성을 독립적인 환경에서 실행할 수 있도록 하는 오픈 소스 플랫폼이다.
+Docker는 컨테이너 기술을 통해 애플리케이션과 해당 애플리케이션의 모든 의존성을 독립적인 환경에서 실행할 수 있도록 하는 오픈 소스 플랫폼이다. 애플리케이션이 **실행되는 환경과 관계없이 일관된 동작을 보장**할 수 있으며 자원을 더 효율적으로 사용할 수 있고, 배포 속도도 빠르기 때문에 Docker를 사용한다.
 
-## Docker 사용 이유
-애플리케이션이 **실행되는 환경과 관계없이 일관된 동작을 보장**할 수 있으며 자원을 더 효율적으로 사용할 수 있고, 배포 속도도 빠르기 때문에 Docker를 사용한다.
-
-## Docker Image
+## 🖼️ Docker Image
 Docker Image는 Docker 컨테이너를 실행하는 데 필요한 파일 시스템과 설정을 포함하는 읽기 전용 템플릿이다.<br>
-애플리케이션이 필요로 하는 라이브러리, 종속성, 환경 변수, 설정 파일 등을 포함하고 있으며, 컨테이너를 생성할 수 있다.
+애플리케이션이 필요로 하는 **라이브러리, 종속성, 환경 변수, 설정 파일** 등을 포함하고 있으며, 컨테이너를 생성할 수 있다.
 
-## Docker Image 최적화
-배포 속도, 비용 절감, 자원 효율성 개선, 환경을 일관성 있게 유지 할 수 있도록 하여 전반적인 애플리케이션 성능과 안정성을 높일 수 있으며 최적화를 진행한다.
+## 🚀 Docker Image 최적화
+Docker Image 최적화를 하면 배포 속도를 높이고 자원을 효율적으로 사용하며, 전반적인 애플리케이션의 성능과 안정성을 강화한다.
 
-## Dockerfile
+## 📄 Dockerfile
 
-### 기획
+### 🎯 기획 의도
 1. 멀티 스테이지 빌드 도입
 2. alpine를 활용한 이미지 크기 최소화
 3. .dockerignore를 활용한 불필요한 파일 최소화
 
-### 설계
+### 🏗️ 설계
 **폴더 구조**<br>
 ![image](https://github.com/user-attachments/assets/a04a2c0f-e636-48c0-975e-773f58e65786)
 
@@ -76,7 +73,7 @@ node_modules
 .git
 ```
 
-### 구축
+### 🛠️ 구축
 ```bash
 # Dockerfile을 기반으로 'testimg'이라는 이름의 이미지를 빌드
 $ docker build -t testimg .
