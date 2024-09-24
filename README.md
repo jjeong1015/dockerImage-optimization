@@ -92,7 +92,7 @@ $ docker ps -a
 
 ### 📊 이미지 크기 비교
 ![image](https://github.com/user-attachments/assets/9a2b21aa-6e23-441c-97f8-d0eeb41677b9)
-<br><br>**default, slim, alpine을 다 실행해보며 이미지 크기를 비교**해보았다.
+<br><br>**alpine, slim, default을 다 실행해보며 이미지 크기를 비교**해보았다.
 <br>testimg : alpine, testimg2 : slim, testimg3 : default
 
 **이미지 크기 : alpine < slim < default**는 이러며, 이미지 크기가 작을수록 자원을 아끼고 속도가 빨라진다.
