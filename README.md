@@ -90,3 +90,11 @@ $ docker ps -a
 ```
 
 ![image](https://github.com/user-attachments/assets/e1fd482b-ac10-40a3-9fe7-f5a1bd7d3c50)
+
+![image](https://github.com/user-attachments/assets/9a2b21aa-6e23-441c-97f8-d0eeb41677b9)
+<br><br>**default, slim, alpine을 다 실행해보며 이미지 크기를 비교**해보았다.
+<br>testimg3 : default
+<br>testimg2 : slim
+<br>testimg : alpine
+
+**이미지 크기 : alpine < slim < default**
