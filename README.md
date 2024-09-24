@@ -86,3 +86,5 @@ $ docker run --name test-container testimg
 # 현재 시스템에 존재하는 모든 컨테이너를 출력
 $ docker ps -a
 ```
+
+![image](https://github.com/user-attachments/assets/e1fd482b-ac10-40a3-9fe7-f5a1bd7d3c50)
