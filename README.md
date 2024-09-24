@@ -28,6 +28,7 @@ Docker Image는 Docker 컨테이너를 실행하는 데 필요한 파일 시스�
 **폴더 구조**<br>
 ![image](https://github.com/user-attachments/assets/a04a2c0f-e636-48c0-975e-773f58e65786)
 
+**코드**<br>
 ```java
 # Test.java
 public class Test {
