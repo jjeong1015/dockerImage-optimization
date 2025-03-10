@@ -1,9 +1,5 @@
 # Docker Image Optimization
 
-|<img src="https://avatars.githubusercontent.com/u/82391356?v=4" width="120" height="120"/>|
-|:-:|
-[@이정민](https://github.com/jjeong1015) 
-
 ## 기술 스택
 <img src="https://img.shields.io/badge/VirtualBox-183A61?style=for-the-badge&logo=VirtualBox&logoColor=black"><img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"><img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=Docker&logoColor=black"> 
 
