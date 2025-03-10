@@ -4,10 +4,13 @@
 |:-:|
 [@이정민](https://github.com/jjeong1015) 
 
-# 🚀 왜 Repository를 만들었는가?
+## 기술 스택
+<img src="https://img.shields.io/badge/VirtualBox-183A61?style=for-the-badge&logo=VirtualBox&logoColor=black"><img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"><img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=Docker&logoColor=black"> 
+
+## 🚀 왜 Repository를 만들었는가?
 최적화된 Docker 이미지 구축 방법과 실전에서 활용할 수 있는 예제를 공유하기 위해 만들었다.
 
-# 🦈 왜 Docker를 써야 하는가?
+## 🦈 왜 Docker를 써야 하는가?
 Docker는 컨테이너 기술을 통해 애플리케이션과 해당 애플리케이션의 모든 의존성을 독립적인 환경에서 실행할 수 있도록 하는 오픈 소스 플랫폼으로, **환경에 구애받지 않고 애플리케이션을 신속하게 배포 및 확장**할 수 있는 장점이 있다.
 
 ## 🖼️ Docker Image란?
@@ -99,3 +102,14 @@ $ docker ps -a
 <br>testimg : alpine, testimg2 : slim, testimg3 : default
 
 **이미지 크기 : alpine < slim < default**는 이러며, 이미지 크기가 작을수록 자원을 아끼고 속도가 빨라진다.
+
+## 🔍 교훈 및 적용
+**멀티 스테이지 빌드의 효율성** : 불필요한 파일을 포함하지 않고 실행에 필요한 요소만 유지하여 이미지 크기를 최소화할 수 있었다.<br>
+**경량 베이스 이미지의 효과** : Alpine과 Slim 같은 가벼운 베이스 이미지를 사용하면 성능을 유지하면서도 더 작은 컨테이너를 만들 수 있다는 점을 확인했다.<br>
+**.dockerignore의 필요성** : 불필요한 파일을 빌드에서 제외함으로써 속도를 개선하고 보안성을 높일 수 있다는 점을 배웠다.<br>
+
+**필요한 요소만 포함하는 최적화된 이미지 사용** → 불필요한 패키지를 제거하고 더 가벼운 이미지를 선택하는 방식으로 컨테이너 배포를 최적화했다.<br>
+**CI/CD 파이프라인에서 빌드 캐싱 활용** → 이미지 빌드 시간을 단축하여 더 빠른 배포를 할 수 있었다.<br>
+
+## 🌱 발전
+이전에는 단순히 하나의 Dockerfile만 사용했다면, 이제는 빌드 과정에서 불필요한 요소를 제거하고 실행 환경을 분리하는 방법을 익혔다. 단순히 Alpine을 선택하는 것이 아닌 어떤 프로젝트에 어떤 베이스 이미지를 사용하는 게 좋은지 판단하게 되었다.
